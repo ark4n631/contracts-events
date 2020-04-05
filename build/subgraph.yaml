@@ -1,6 +1,6 @@
 specVersion: 0.0.2
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: Contract
@@ -20,7 +20,7 @@ dataSources:
         - SignerRemoved
       abis:
         - name: Contract
-          file: ./abis/Contract.json
+          file: Contract/abis/Contract.json
       eventHandlers:
         - event: CollateralDeposited(indexed uint256,indexed address,uint256)
           handler: handleCollateralDeposited
@@ -32,4 +32,4 @@ dataSources:
           handler: handleSignerAdded
         - event: SignerRemoved(indexed address)
           handler: handleSignerRemoved
-      file: ./src/mapping.ts
+      file: Contract/Contract.wasm
