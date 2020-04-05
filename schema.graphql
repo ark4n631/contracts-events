@@ -1,0 +1,6 @@
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  loanID: BigInt! # uint256
+  borrower: Bytes! # address
+}
